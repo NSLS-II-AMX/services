@@ -12,7 +12,8 @@ jupyter_log="$log_dir/jupyter-amx_$(date "+%F_%H-%M-%S").log"
 
 source /opt/conda/etc/profile.d/conda.sh
 
-conda activate /opt/conda_envs/collection-2019-3.0-fmx
+# conda activate /opt/conda_envs/collection-2019-3.0-fmx
+conda activate /nsls2/conda/envs/2022-2.0-py39
 
 conda env list
 
