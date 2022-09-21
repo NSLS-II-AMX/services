@@ -5,8 +5,6 @@ export USER=xf17id1
 export HOME=/epics/iocs/notebook
 export SHELL=bash
 
-. /etc/profile.d/epics.sh
-
 log_dir="/var/log/jupyter/"
 jupyter_log="$log_dir/jupyter-amx_$(date "+%F_%H-%M-%S").log"
 
@@ -23,4 +21,4 @@ conda env list
 # symlinked to /usr/share/jupyter/kernels/collection-2019-3.0/kernel.json     #
 ###############################################################################
 
-jupyter lab --no-browser --notebook-dir=/epics/iocs/notebook/notebooks/ --ip=0.0.0.0 --port=17000 --debug > $jupyter_log 2>&1
+jupyter lab --no-browser --config=/epics/iocs/notebook/configs/jupyter_notebook_config.py --notebook-dir=/epics/iocs/notebook/notebooks/ --ip=0.0.0.0 --port=17000 > $jupyter_log 2>&1
